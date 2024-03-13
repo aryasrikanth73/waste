@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your HTML Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+        .input-container {
+            text-align: center;
+        }
+        .custom-input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .submit-button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .output-container {
+            margin-top: 20px;
+            width: 1000px;
+            height: 400px;
+            border: 2px solid #333;
+            padding: 20px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .output-text {
+            color: #991a1a;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            white-space: pre-wrap;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 8px 16px;
+            font-size: 14px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="input-container">
+        <input type="text" id="inputText1" class="custom-input" placeholder="table headings here">
+        <button onclick="submitTextable()" class="submit-button">Submit</button> <br>
+
+    </div>
+
+    <div class="output-container" id="outputContainer" contenteditable="true">
+        <p>
+            &lt;style type="text/css">
+            h2 { text-align: left; font-weight: 700 !important; margin: 7px 0; } h2 { font-size: 25px; } h3 { font-size:
+            22px; } h4, h5, h6 { font-size: 20px; } .text-cont-pra { padding-top: 20px; } .res { margin-height: auto;
+            margin-width: auto; } p.para_blog1 { text-indent: 20px; } p { padding: 10px 0; } .list-alpha {
+            list-style-type: lower-alpha; padding-left: 20px; padding-bottom: 20px } .disc { list-style-type: disc;
+            padding-left: 20px; padding-bottom: 20px } .list-number { list-style-type: decimal; padding-left: 20px; }
+            p.para_blog { padding: 10px 0; } ul.number { padding: 0 17px } ul.number li { list-style-type: decimal;
+            padding: 5px 0 } ul.number li ul { padding: 0 20px } ul.number li ul li { list-style-type: disc; padding:
+            5px 0 } ul li span.li-head { font-weight: 700 } h2, h3 { text-align: left !important; } html {
+            scroll-behavior: smooth; } .boxing { background-color: #5880bc !important; padding: 0px 15px !important; }
+            .cont>a { color: #fff !important; text-align: left; font-size: 14px; font-family: 'Nunito Sans'; } .b-faq {
+            margin-top: 20px; } .tab_head ul.tab_ul { list-style-type: decimal; padding: 0 20px } .tab_head {
+            background-color: #EDF6FF; padding: 10px; border: 1px solid #AAA; border-radius: 4px; box-shadow: 0 1px 1px
+            rgba(0, 0, 0, .05); width: auto; margin: 10px 0 } @import "mobstyle.css" screen and (max-width: 768px); { /*
+            For mobile phones: */ body { background-color: lightblue; } } img { display: block; margin-left: auto;
+            margin-right: auto; padding: 20px 0px; } /* table */ .tabular { border-collapse: collapse; width: 100%; }
+            table { font-family: arial, sans-serif; border-collapse: collapse; width: 100%; } td, th { border: 1px solid
+            black; text-align: left; padding: 8px; } th { text-align: center; font-size: large; font-weight: bold; }
+            &lt;/style>
+            &lt;div class="tab_head">
+            &lt;p>&lt;strong>Table of Content&lt;/strong>&lt;/p>
+            &lt;ul class="tab_ul"> <br>
+        <ul class="output-text">&lt;li>&lt;a href="#1">&lt;/a>&lt;/li></ul>
+        <!-- before -->
+        </p>
+        <ul class="output-text" id="outputText1"></ul>
+        <p>
+            &lt;/ul>
+            &lt;/div>
+            <br>
+            &lt;div class="text-cont-pra"> <br>
+            &lt;p class="para_blog">&lt;/p> <br>
+        <ul class="output-text">&lt;div id="1">&lt;h2>&lt;/h2>
+            &lt;p class="para_blog">&lt;/p>
+            &lt;/div></ul>
+        &lt;div>
+        &lt;div class="row">
+        &lt;div class="col-md-12">
+        &lt;h3>Learn the core concepts of Data Science Course video on YouTube:&lt;/h3>
+
+        &lt;div style="width:100%; padding:10px 0">
+        &lt;div data-p="680">&lt;iframe
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen="" frameborder="0" height="415"
+        src="https://www.youtube.com/embed/gmcKL3b1BZw?si=Vs6BTwG8XXkFXRgv"
+        title="YouTube video player" width="100%">&lt;/iframe>&lt;/div>
+        &lt;/div>
+        &lt;/div>
+        &lt;/div>
+        &lt;/div>
+        <!-- after -->
+        </p>
+        <ul class="output-text" id="outputText2"></ul>
+        <p>
+            &lt;/div>&lt;div class="row"> &lt;div class="col-md-12"> &lt;h3>Data Science Placement Success Story&lt;/h3>
+            &lt;div style="width:100%; padding:10px 0"> &lt;div data-p="680">&lt;iframe allow="accelerometer; autoplay;
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""
+            frameborder="0" height="415" src="https://www.youtube.com/embed/A-3LUKCytCQ" title="YouTube video player"
+            width="100%">&lt;/iframe>&lt;/div> &lt;/div> &lt;/div> &lt;/div> &lt;div class="our-loc">&lt;h3>Data Science
+            Training Institutes in Other Locations&lt;/h3>&lt;a
+            href="https://360digitmg.com/india/agra/data-science-certification-course-training-institute">Agra&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/ahmedabad/data-science-certification-course-training-institute">Ahmedabad&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/amritsar/data-science-certification-course-training-institute">Amritsar&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/anand/data-science-certification-course-training-institute">Anand&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/anantapur/data-science-certification-course-training-institute">Anantapur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/bangalore/data-science-certification-course-training-institute">Bangalore&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/bhopal/data-science-certification-course-training-institute">Bhopal&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/bhubaneswar/data-science-certification-course-training-institute">Bhubaneswar&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/chengalpattu/data-science-certification-course-training-institute">Chengalpattu&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/chennai/data-science-certification-course-training-institute">Chennai&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/cochin/data-science-certification-course-training-institute">Cochin&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/dehradun/data-science-certification-course-training-institute">Dehradun&lt;/a>,
+            &lt;a href="https://360digitmg.com/malaysia/certification-program-in-data-science">Malaysia&lt;/a>, &lt;a
+            href="https://360digitmg.com/india/dombivli/data-science-certification-course-training-institute">Dombivli&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/durgapur/data-science-certification-course-training-institute">Durgapur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/ernakulam/data-science-certification-course-training-institute">Ernakulam&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/erode/data-science-certification-course-training-institute">Erode&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/gandhinagar/data-science-certification-course-training-institute">Gandhinagar&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/ghaziabad/data-science-certification-course-training-institute">Ghaziabad&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/gorakhpur/data-science-certification-course-training-institute">Gorakhpur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/gwalior/data-science-certification-course-training-institute">Gwalior&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/bangalore/hebbal/data-science-certification-course-training-institute">Hebbal&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/hyderabad/data-science-certification-course-training-institute">Hyderabad&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/jabalpur/data-science-certification-course-training-institute">Jabalpur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/jalandhar/data-science-certification-course-training-institute">Jalandhar&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/jammu/data-science-certification-course-training-institute">Jammu&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/jamshedpur/data-science-certification-course-training-institute">Jamshedpur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/jodhpur/data-science-certification-course-training-institute">Jodhpur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/khammam/data-science-certification-course-training-institute">Khammam&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/kolhapur/data-science-certification-course-training-institute">Kolhapur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/pune/kothrud/data-science-certification-course-training-institute">Kothrud&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/ludhiana/data-science-certification-course-training-institute">Ludhiana&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/madurai/data-science-certification-course-training-institute">Madurai&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/meerut/data-science-certification-course-training-institute">Meerut&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/mohali/data-science-certification-course-training-institute">Mohali&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/moradabad/data-science-certification-course-training-institute">Moradabad&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/noida/data-science-certification-course-training-institute">Noida&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/pimpri/data-science-certification-course-training-institute">Pimpri&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/pondicherry/data-science-certification-course-training-institute">Pondicherry&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/pune/data-science-certification-course-training-institute">Pune&lt;/a>,
+            &lt;a href="https://360digitmg.com/india/data-science-course-in-rajkot">Rajkot&lt;/a>, &lt;a
+            href="https://360digitmg.com/india/ranchi/data-science-certification-course-training-institute">Ranchi&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/rohtak/data-science-certification-course-training-institute">Rohtak&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/roorkee/data-science-certification-course-training-institute">Roorkee&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/rourkela/data-science-certification-course-training-institute">Rourkela&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/shimla/data-science-certification-course-training-institute">Shimla&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/shimoga/data-science-certification-course-training-institute">Shimoga&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/siliguri/data-science-certification-course-training-institute">Siliguri&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/srinagar/data-science-certification-course-training-institute">Srinagar&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/thane/data-science-certification-course-training-institute">Thane&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/thiruvananthapuram/data-science-certification-course-training-institute">Thiruvananthapuram&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/tiruchchirappalli/data-science-certification-course-training-institute">Tiruchchirappalli&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/trichur/data-science-certification-course-training-institute">Trichur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/udaipur/data-science-certification-course-training-institute">Udaipur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/bangalore/yelahanka/data-science-certification-course-training-institute">Yelahanka&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/andhra-pradesh/data-science-certification-course-training-institute">Andhra
+            Pradesh&lt;/a>, &lt;a
+            href="https://360digitmg.com/india/chennai/anna-nagar/data-science-certification-course-training-institute">Anna
+            Nagar&lt;/a>, &lt;a
+            href="https://360digitmg.com/india/bhilai/data-science-certification-course-training-institute">Bhilai&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/borivali/data-science-certification-course-training-institute">Borivali&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/calicut/data-science-certification-course-training-institute">Calicut&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/chandigarh/data-science-certification-course-training-institute">Chandigarh&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/chennai/chromepet/data-science-certification-course-training-institute">Chromepet&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/coimbatore/data-science-certification-course-training-institute">Coimbatore&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/hyderabad/dilsukhnagar/data-science-certification-course-training-institute">Dilsukhnagar&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/hyderabad/ecil/data-science-certification-course-training-institute">ECIL&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/faridabad/data-science-certification-course-training-institute">Faridabad&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/warangal/data-science-certification-course-training-institute">Greater
+            Warangal&lt;/a>, &lt;a
+            href="https://360digitmg.com/india/guduvanchery/data-science-certification-course-training-institute">Guduvanchery&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/guntur/data-science-certification-course-training-institute">Guntur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/gurgaon/data-science-certification-course-training-institute">Gurgaon&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/guwahati/data-science-certification-course-training-institute">Guwahati&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/hoodi-circle/data-science-certification-course-training-institute">Hoodi&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/indore/data-science-certification-course-training-institute">Indore&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/jaipur/data-science-certification-course-training-institute">Jaipur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/kalaburagi/data-science-certification-course-training-institute">Kalaburagi&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/kanpur/data-science-certification-course-training-institute">Kanpur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/pune/kharadi/data-science-certification-course-training-institute">Kharadi&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/kochi/data-science-certification-course-training-institute">Kochi&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/kolkata/data-science-certification-course-training-institute">Kolkata&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/hyderabad/kompally/data-science-certification-course-training-institute">Kompally&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/lucknow/data-science-certification-course-training-institute">Lucknow&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/mangalore/data-science-certification-course-training-institute">Mangalore&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/mumbai/data-science-certification-course-training-institute">Mumbai&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/mysore/data-science-certification-course-training-institute">Mysore&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/nagpur/data-science-certification-course-training-institute">Nagpur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/nashik/data-science-certification-course-training-institute">Nashik&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/navi-mumbai/data-science-certification-course-training-institute">Navi
+            Mumbai&lt;/a>, &lt;a
+            href="https://360digitmg.com/india/patna/data-science-certification-course-training-institute">Patna&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/chennai/porur/data-science-certification-course-training-institute">Porur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/raipur/data-science-certification-course-training-institute">Raipur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/salem/data-science-certification-course-training-institute">Salem&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/surat/data-science-certification-course-training-institute">Surat&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/chennai/thoraipakkam/data-science-certification-course-training-institute">Thoraipakkam&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/trichy/data-science-certification-course-training-institute">Trichy&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/hyderabad/uppal/data-science-certification-course-training-institute">Uppal&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/vadodara/data-science-certification-course-training-institute">Vadodara&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/varanasi/data-science-certification-course-training-institute">Varanasi&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/vijayawada/data-science-certification-course-training-institute">Vijayawada&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/vizag/data-science-certification-course-training-institute">Vizag&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/tirunelveli/data-science-certification-course-training-institute">Tirunelveli&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/aurangabad/data-science-certification-course-training-institute">Aurangabad&lt;/a>
+            &lt;/div> &lt;div class="our-loc"> &lt;h3>Data Analyst Courses in Other Locations&lt;/h3> &lt;p>&lt;a
+            href="https://360digitmg.com/india/hyderabad/ecil/data-analytics-certification-course-training-institute">ECIL&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/jaipur/data-analytics-certification-course-training-institute">Jaipur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/pune/data-analytics-certification-course-training-institute">Pune&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/gurgaon/data-analytics-certification-course-training-institute">Gurgaon&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/salem/data-analytics-certification-course-training-institute">Salem&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/surat/data-analytics-certification-course-training-institute">Surat&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/agra/data-analytics-certification-course-training-institute">Agra&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/ahmedabad/data-analytics-certification-course-training-institute">Ahmedabad&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/amritsar/data-analytics-certification-course-training-institute">Amritsar&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/anand/data-analytics-certification-course-training-institute">Anand&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/anantapur/data-analytics-certification-course-training-institute">Anantapur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/andhra-pradesh/data-analytics-certification-course-training-institute">Andhra
+            Pradesh&lt;/a>, &lt;a
+            href="https://360digitmg.com/india/chennai/anna-nagar/data-analytics-certification-course-training-institute">Anna
+            Nagar&lt;/a>, &lt;a
+            href="https://360digitmg.com/india/aurangabad/data-analytics-certification-course-training-institute">Aurangabad&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/bhilai/data-analytics-certification-course-training-institute">Bhilai&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/bhopal/data-analytics-certification-course-training-institute">Bhopal&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/bhubaneswar/data-analytics-certification-course-training-institute">Bhubaneswar&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/mumbai/borivali/data-analytics-certification-course-training-institute">Borivali&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/calicut/data-analytics-certification-course-training-institute">Calicut&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/cochin/data-analytics-certification-course-training-institute">Cochin&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/chengalpattu/data-analytics-certification-course-training-institute">Chengalpattu
+            &lt;/a>, &lt;a
+            href="https://360digitmg.com/india/dehradun/data-analytics-certification-course-training-institute">Dehradun&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/dombivli/data-analytics-certification-course-training-institute">Dombivli&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/durgapur/data-analytics-certification-course-training-institute">Durgapur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/ernakulam/data-analytics-certification-course-training-institute">Ernakulam&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/erode/data-analytics-certification-course-training-institute">Erode&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/gandhinagar/data-analytics-certification-course-training-institute">Gandhinagar&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/ghaziabad/data-analytics-certification-course-training-institute">Ghaziabad&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/gorakhpur/data-analytics-certification-course-training-institute">Gorakhpur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/guduvanchery/data-analytics-certification-course-training-institute">Guduvanchery&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/gwalior/data-analytics-certification-course-training-institute">Gwalior&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/bangalore/hebbal/data-analytics-certification-course-training-institute">Hebbal&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/hoodi-circle/data-analytics-certification-course-training-institute">Hoodi
+            &lt;/a>, &lt;a
+            href="https://360digitmg.com/india/indore/data-analytics-certification-course-training-institute">Indore&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/jabalpur/data-analytics-certification-course-training-institute">Jabalpur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/jaipur/data-analytics-certification-course-training-institute">Jaipur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/jalandhar/data-analytics-certification-course-training-institute">Jalandhar&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/jammu/data-analytics-certification-course-training-institute">Jammu&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/jamshedpur/data-analytics-certification-course-training-institute">Jamshedpur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/jodhpur/data-analytics-certification-course-training-institute">Jodhpur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/kanpur/data-analytics-certification-course-training-institute">Kanpur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/khammam/data-analytics-certification-course-training-institute">Khammam&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/kochi/data-analytics-certification-course-training-institute">Kochi&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/kolhapur/data-analytics-certification-course-training-institute">Kolhapur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/kolkata/data-analytics-certification-course-training-institute">Kolkata&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/kothrud/data-analytics-certification-course-training-institute">Kothrud&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/ludhiana/data-analytics-certification-course-training-institute">Ludhiana&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/madurai/data-analytics-certification-course-training-institute">Madurai&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/mangalore/data-analytics-certification-course-training-institute">Mangalore&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/meerut/data-analytics-certification-course-training-institute">Meerut&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/mohali/data-analytics-certification-course-training-institute">Mohali&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/moradabad/data-analytics-certification-course-training-institute">Moradabad&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/pimpri/data-analytics-certification-course-training-institute">Pimpri&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/pondicherry/data-analytics-certification-course-training-institute">Pondicherry&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/chennai/porur/data-analytics-certification-course-training-institute">Porur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/rajkot/data-analytics-certification-course-training-institute">Rajkot&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/ranchi/data-analytics-certification-course-training-institute">Ranchi&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/rohtak/data-analytics-certification-course-training-institute">Rohtak&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/roorkee/data-analytics-certification-course-training-institute">Roorkee&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/rourkela/data-analytics-certification-course-training-institute">Rourkela&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/shimla/data-analytics-certification-course-training-institute">Shimla&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/shimoga/data-analytics-certification-course-training-institute">Shimoga&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/siliguri/data-analytics-certification-course-training-institute">Siliguri&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/srinagar/data-analytics-certification-course-training-institute">Srinagar&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/chennai/thoraipakkam/data-analytics-certification-course-training-institute">Thoraipakkam
+            &lt;/a>, &lt;a
+            href="https://360digitmg.com/india/tiruchchirappalli/data-analytics-certification-course-training-institute">Tiruchirappalli&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/tirunelveli/data-analytics-certification-course-training-institute">Tirunelveli&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/trichur/data-analytics-certification-course-training-institute">Trichur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/trichy/data-analytics-certification-course-training-institute">Trichy&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/udaipur/data-analytics-certification-course-training-institute">Udaipur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/vijayawada/data-analytics-certification-course-training-institute">Vijayawada&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/vizag/data-analytics-certification-course-training-institute">Vizag&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/warangal/data-analytics-certification-course-training-institute">Warangal&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/chennai/data-analytics-certification-course-training-institute">Chennai&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/coimbatore/data-analytics-certification-course-training-institute">Coimbatore&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/delhi/data-analytics-certification-course-training-institute">Delhi&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/hyderabad/dilsukhnagar/data-analytics-certification-course-training-institute">Dilsukhnagar&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/hyderabad/data-analytics-certification-course-training-institute">Hyderabad&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/kalyan/data-analytics-certification-course-training-institute">Kalyan&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/nagpur/data-analytics-certification-course-training-institute">Nagpur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/noida/data-analytics-certification-course-training-institute">Noida&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/thane/data-analytics-certification-course-training-institute">Thane&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/thiruvananthapuram/data-analytics-certification-course-training-institute">Thiruvananthapuram&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/hyderabad/uppal/data-analytics-certification-course-training-institute">Uppal&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/hyderabad/kompally/data-analytics-certification-course-training-institute">Kompally&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/bangalore/data-analytics-certification-course-training-institute">Bangalore&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/chandigarh/data-analytics-certification-course-training-institute">Chandigarh&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/chennai/chromepet/data-analytics-certification-course-training-institute">Chromepet&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/faridabad/data-analytics-certification-course-training-institute">Faridabad&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/guntur/data-analytics-certification-course-training-institute">Guntur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/guwahati/data-analytics-certification-course-training-institute">Guwahati&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/pune/kharadi/data-analytics-certification-course-training-institute">Kharadi&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/lucknow/data-analytics-certification-course-training-institute">Lucknow&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/mumbai/data-analytics-certification-course-training-institute">Mumbai&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/mysore/data-analytics-certification-course-training-institute">Mysore&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/nashik/data-analytics-certification-course-training-institute">Nashik&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/navi-mumbai/data-analytics-certification-course-training-institute">Navi
+            Mumbai&lt;/a>, &lt;a
+            href="https://360digitmg.com/india/patna/data-analytics-certification-course-training-institute">Patna&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/pune/data-analytics-certification-course-training-institute">Pune&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/raipur/data-analytics-certification-course-training-institute">Raipur&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/vadodara/data-analytics-certification-course-training-institute">Vadodara&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/varanasi/data-analytics-certification-course-training-institute">Varanasi&lt;/a>,
+            &lt;a
+            href="https://360digitmg.com/india/bangalore/yelahanka/data-analytics-certification-course-training-institute">Yelahanka&lt;/a>
+            &lt;/p> &lt;/div>
+        </p>
+    </div>
+
+
+    <!-- Copy Button -->
+    <button onclick="copyText()" class="copy-button">Copy</button>
+
+    <script>
+        var counter = 2;
+        var counter2 = 2;
+
+        function submitText() {
+
+            var inputValue = document.getElementById("inputText1").value;
+
+
+            var outputElement = document.getElementById("outputText1");
+
+
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            var text = document.createTextNode('<li><a href="#' + counter + '">' + inputValue + '</a></li>');
+            a.appendChild(text);
+            li.appendChild(a);
+
+
+            outputElement.appendChild(li);
+
+
+            counter++;
+
+
+
+        }
+
+        function submitText2() {
+
+            var inputValue = document.getElementById("inputText1").value;
+            console.log(inputValue)
+
+            var outputElement = document.getElementById("outputText2");
+
+
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            var text = document.createTextNode('<div id="' + counter2 + '"><h2>' + inputValue + '</h2><p class="para_blog"></p></div>');
+            a.appendChild(text);
+            li.appendChild(a);
+
+
+            outputElement.appendChild(li);
+
+
+            counter2++;
+
+
+
+        }
+        function submitTextable() {
+
+            submitText();
+            submitText2();
+            document.getElementById("inputText1").value = "";
+
+        }
+
+
+        function copyText() {
+            var outputText1 = document.getElementById("outputContainer").innerText;
+            navigator.clipboard.writeText(outputText1)
+                .then(() => {
+                    alert("Text copied to clipboard!");
+                })
+                .catch(err => {
+                    console.error('Failed to copy text: ', err);
+                });
+        }
+    </script>
+</body>
+
+</html>
